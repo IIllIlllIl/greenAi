@@ -86,7 +86,7 @@ def p_value(arrA, arrB):
 
 def read(file_name):
     energy = {"pkg": [], "ram": [], "tim": [], "gpu": [], "pre": []}
-    path = "./mnist/" + file_name + "/" + file_name + "-"
+    path = "./data/" + file_name + "/" + file_name + "-"
     for i in range(data_num):
         si = str(i)
         file_path = path + si
@@ -122,7 +122,7 @@ def collect(file):
         mv_cmd = "mv " + file + "-" + si + " " +file
         # print(mv_cmd)
         os.system(mv_cmd)
-    os.system("mv " + file + " mnist")
+    os.system("mv " + file + " data")
     os.system("rm -r " + file)
 
 
@@ -176,7 +176,7 @@ elif args.key == "evaluate":
     path = "./data.csv"
     os.system("rm " + path)
     origin = read("p")
-    for n in os.listdir("./mnist"):
+    for n in os.listdir("./data"):
         if n != 'p':
             print(n)
             mutant = read(n)
@@ -185,7 +185,7 @@ elif args.key == "csv":
     path = "./data.csv"
     os.system("rm " + path)
     origin = read("p")
-    for n in os.listdir("./mnsit"):
+    for n in os.listdir("./data"):
         if n != 'p':
             print(n)
             mutant = read(n)
