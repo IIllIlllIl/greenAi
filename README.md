@@ -16,13 +16,23 @@ This repository contains:
 - nvidia-smi
 - Python 3.7.0
 
-Be cautious that the fuction we used of perf may not work on some devices.
-
 # Installation
 ***
-1. Download this repository by: <br>
-	git clone https://github.com/IIllIlllIl/greenAi.git
-2. Install the tools (perf and nvidia-smi).
+1. Download this repository by:
+
+		git clone https://github.com/IIllIlllIl/greenAi.git
+
+2. Install the tools (`perf` and `nvidia-smi`). The vision of tools are depends on your own operationg system. Be cautious that the fuction we used of `perf` may not work on some devices.
+3. Install the models and their datasets. They can be installed from their repositories.
+	- [mnist](https://github.com/pytorch/examples/tree/main/mnist)
+	- [mnist_forward_forward](https://github.com/pytorch/examples/tree/main/mnist_forward_forward)
+	- [siamese_network](https://github.com/pytorch/examples/tree/main/siamese_network)
+	- [pytorch_resnet_cifar10](https://github.com/akamaster/pytorch_resnet_cifar10)
+	- [Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch)
+4. Install the relative Python codebase by:
+
+		pip install -r requirements.txt
+
 # Mutation
 ***
 
