@@ -1,5 +1,12 @@
 # greenAi
-This is the mutation test framework to estimate how Deep Learning (DL) hyperparameters affect energy consumption. It can mutate the hyperparameters and collect the energy metrics of the package, RAM, and GPU. Besides, it can analyze the correlation and trade-off between the metrics and hyperparameters. This framework is designed based on [ICSE_2022_artifact](https://github.com/stefanos1316/ICSE_2022_artifact). <br>
+This is the mutation test framework to estimate how Deep Learning (DL) hyperparameters affect energy consumption. It can mutate the hyperparameters and collect the energy metrics of the package, RAM, and GPU. Besides, it can analyze the correlation and trade-off between the metrics and hyperparameters. We are very grateful to thank Georgiou et al. [^1] for their contibution on ICSE22. This framework is designed based on their [ICSE_2022_artifact](https://github.com/stefanos1316/ICSE_2022_artifact). <br>
+
+[^1]: S. Georgiou, M. Kechagia, T. Sharma, F. Sarro, Y. Zou, Green ai: Do
+deep learning frameworks have different costs?, in: Proceedings of the 44th
+International Conference on Software Engineering, ICSE ’22, Association
+for Computing Machinery, New York, NY, USA, 2022, p. 1082–1094. doi:
+10.1145/3510003.3510221. URL https://doi.org/10.1145/3510003.3510221
+
 This repository contains:
 - `mutation`: codes to conduct mutation tests on DL models. We did our mutation test on five open-source DL programs, including [mnist](https://github.com/pytorch/examples/tree/main/mnist), [mnist_forward_forward](https://github.com/pytorch/examples/tree/main/mnist_forward_forward), [siamese_network](https://github.com/pytorch/examples/tree/main/siamese_network), [pytorch_resnet_cifar10](https://github.com/akamaster/pytorch_resnet_cifar10), and [Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch). The codes are organized by the names of five models. Each directory includes `governor.sh`, `run.sh`, `shell.py`, and`result`. <br>
 - `mutation/*/governor.sh `: a shell code to switch the CPU setting. <br>
